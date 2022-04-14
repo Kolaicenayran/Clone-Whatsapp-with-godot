@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scene/ui_aramalar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scene/ui_sohbetler.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/main_ui.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scene/ui_durum.tscn" type="PackedScene" id=4]
+[ext_resource path="res://script/main.gd" type="Script" id=5]
+
+[node name="main" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="main_ui" parent="." instance=ExtResource( 3 )]
+mouse_filter = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_right = 720.0
+margin_bottom = 1312.0
+rect_min_size = Vector2( 720, 1280 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+margin_right = 2168.0
+margin_bottom = 1040.0
+
+[node name="ui_sohbetler" parent="ScrollContainer/HBoxContainer" instance=ExtResource( 2 )]
+margin_bottom = 1040.0
+rect_min_size = Vector2( 720, 1040 )
+
+[node name="ui_durum" parent="ScrollContainer/HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 724.0
+margin_right = 1444.0
+rect_min_size = Vector2( 720, 0 )
+
+[node name="ui_aramalar" parent="ScrollContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 1448.0
+margin_right = 2168.0
+margin_bottom = 1040.0
+rect_min_size = Vector2( 720, 0 )
+
+[node name="screen_resize" type="Timer" parent="ScrollContainer"]
+wait_time = 0.001
+
+[connection signal="scroll_ended" from="ScrollContainer" to="." method="_on_ScrollContainer_scroll_ended"]
+[connection signal="timeout" from="ScrollContainer/screen_resize" to="." method="_on_screen_resize_timeout"]

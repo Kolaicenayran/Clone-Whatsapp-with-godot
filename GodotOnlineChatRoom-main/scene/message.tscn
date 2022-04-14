@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://script/message.gd" type="Script" id=1]
+[ext_resource path="res://assets/Helvetica-Neue-Font/Helvetica Neue W01 77 Bd Cn Obl/Helvetica Neue W01 77 Bd Cn Obl.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/Helvetica-Neue-Font/Helvetica Neue W01 77 Bd Cn Obl/icons8-double-tick-50.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0.364706, 0.294118, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+anti_aliasing_size = 4.0
+
+[sub_resource type="DynamicFont" id=3]
+size = 22
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="message" type="Panel"]
+margin_right = 200.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 80 )
+rect_scale = Vector2( 1.5, 1.5 )
+mouse_filter = 2
+size_flags_horizontal = 8
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="time" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -93.0
+margin_top = -30.0
+margin_right = -34.0
+margin_bottom = 1.0
+custom_colors/font_color = Color( 0.572549, 0.756863, 0.72549, 1 )
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 18.6667
+margin_right = 170.0
+margin_bottom = 56.6667
+custom_fonts/font = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PinClipartcomHow-to-insert-clipart1701281" type="TextureRect" parent="."]
+modulate = Color( 0, 0.811765, 1, 1 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -40.0
+margin_top = -40.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

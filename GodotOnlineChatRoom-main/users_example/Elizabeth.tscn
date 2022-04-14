@@ -1,0 +1,281 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://stylebox/main.tres" type="DynamicFont" id=1]
+[ext_resource path="res://pps/kindpng_415494.png" type="Texture" id=2]
+[ext_resource path="res://assets/PngItem_3075053.png" type="Texture" id=3]
+[ext_resource path="res://assets/Default WhatsApp Dark Theme Wallpaper Purple wallpaper iphone.png" type="Texture" id=4]
+[ext_resource path="res://assets/kapak 16.png" type="Texture" id=5]
+[ext_resource path="res://assets/kapak_20-removebg-preview.png" type="Texture" id=6]
+[ext_resource path="res://assets/kapak 18.png" type="Texture" id=7]
+[ext_resource path="res://assets/kapak 19.png" type="Texture" id=8]
+[ext_resource path="res://assets/kapak 17.png" type="Texture" id=9]
+[ext_resource path="res://script/TextEdit.gd" type="Script" id=10]
+[ext_resource path="res://stylebox/text.tres" type="StyleBox" id=11]
+[ext_resource path="res://assets/Helvetica-Neue-Font/Helvetica Neue W01 87 Hv Cn Obl/messagefont.otf" type="DynamicFontData" id=12]
+[ext_resource path="res://script/messga channels.gd" type="Script" id=13]
+[ext_resource path="res://Godot-Save-Node-main/save/Save.gd" type="Script" id=14]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.121569, 0.172549, 0.203922, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.121569, 0.172549, 0.203922, 1 )
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 12 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+corner_radius_top_left = 3
+
+[node name="message_list" type="Control"]
+margin_top = 120.0
+margin_right = 720.0
+margin_bottom = 1170.0
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="Control" parent="."]
+margin_right = 720.0
+margin_bottom = 1280.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="bg"]
+margin_right = 720.0
+margin_bottom = 1280.0
+rect_min_size = Vector2( 720, 1280 )
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ui" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ui"]
+
+[node name="up" type="Panel" parent="ui/CanvasLayer"]
+margin_right = 720.0
+margin_bottom = 130.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Kapak16" type="Sprite" parent="ui/CanvasLayer"]
+position = Vector2( 27, 67 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="Kapak17" type="Sprite" parent="ui/CanvasLayer"]
+position = Vector2( 578, 67 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 9 )
+
+[node name="last_view" type="Label" parent="ui/CanvasLayer"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 171.0
+margin_top = 79.0
+margin_right = 680.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 1 )
+text = "Son Görülme 16:42"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="username" type="Label" parent="ui/CanvasLayer"]
+margin_left = 171.0
+margin_top = 29.0
+margin_right = 363.0
+margin_bottom = 65.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Elizabeth Ualy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="goback" type="Button" parent="ui/CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 2.0
+margin_top = 15.0
+margin_right = 54.0
+margin_bottom = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="profile_picture" type="Sprite" parent="ui/CanvasLayer"]
+position = Vector2( 111, 65 )
+scale = Vector2( 0.16, 0.16 )
+texture = ExtResource( 2 )
+
+[node name="text_create" type="Control" parent="."]
+margin_right = 720.0
+margin_bottom = 1280.0
+rect_min_size = Vector2( 720, 1280 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="text_create"]
+
+[node name="panel" type="Panel" parent="text_create/CanvasLayer2"]
+margin_left = 20.0
+margin_top = 1190.0
+margin_right = 610.0
+margin_bottom = 1270.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Kapak18" type="Sprite" parent="text_create/CanvasLayer2"]
+position = Vector2( 525, 1232 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 7 )
+
+[node name="Kapak19" type="Sprite" parent="text_create/CanvasLayer2"]
+position = Vector2( 55, 1232 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 8 )
+
+[node name="elon" type="Panel" parent="text_create/CanvasLayer2/Kapak19"]
+margin_left = 835.714
+margin_top = -45.7142
+margin_right = 875.714
+margin_bottom = -5.71423
+rect_scale = Vector2( 2, 2 )
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Kapak20-removebg-preview" type="Sprite" parent="text_create/CanvasLayer2"]
+position = Vector2( 667, 1229 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="text_create"]
+layer = 7
+
+[node name="TextEdit" type="TextEdit" parent="text_create/CanvasLayer"]
+margin_left = 90.0
+margin_top = 1205.0
+margin_right = 454.0
+margin_bottom = 1285.0
+size_flags_horizontal = 9
+size_flags_vertical = 9
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = ExtResource( 11 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="message_list" type="Control" parent="."]
+margin_top = 120.0
+margin_right = 720.0
+margin_bottom = 1170.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="message_list"]
+margin_left = 30.0
+margin_top = 25.0
+margin_right = 722.0
+margin_bottom = 1075.0
+rect_min_size = Vector2( 360, 0 )
+rect_rotation = -0.172448
+rect_scale = Vector2( 1.00672, 0.989953 )
+rect_pivot_offset = Vector2( -330, 709 )
+rect_clip_content = false
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="message_list/ScrollContainer"]
+margin_right = 680.0
+margin_bottom = 1050.0
+rect_min_size = Vector2( 680, 1050 )
+size_flags_horizontal = 8
+custom_constants/separation = 140
+
+[node name="message_list2" type="Control" parent="."]
+margin_top = 120.0
+margin_right = 720.0
+margin_bottom = 1170.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="message_list2"]
+margin_top = -25.0
+margin_right = 692.0
+margin_bottom = 1025.0
+rect_min_size = Vector2( 360, 0 )
+rect_pivot_offset = Vector2( -951, 558 )
+rect_clip_content = false
+mouse_filter = 2
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="message_list2/ScrollContainer"]
+margin_right = 680.0
+margin_bottom = 1050.0
+rect_min_size = Vector2( 680, 1050 )
+mouse_filter = 2
+size_flags_horizontal = 8
+size_flags_stretch_ratio = 0.0
+custom_constants/separation = 140
+
+[node name="Button" type="Button" parent="."]
+visible = false
+modulate = Color( 0.121569, 0.172549, 0.203922, 1 )
+margin_right = 12.0
+margin_bottom = 20.0
+custom_styles/normal = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 0.597003, 1.3827 )
+normal = ExtResource( 3 )
+
+[node name="Save" type="Node2D" parent="."]
+script = ExtResource( 14 )
+Save_Scene = NodePath("..")
+saveFile = "res://users_example/Elizabeth.tscn"
+
+[connection signal="pressed" from="ui/CanvasLayer/goback" to="." method="_on_goback_pressed"]
+[connection signal="text_changed" from="text_create/CanvasLayer/TextEdit" to="text_create/CanvasLayer/TextEdit" method="_on_TextEdit_text_changed"]

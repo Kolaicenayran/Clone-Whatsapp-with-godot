@@ -1,0 +1,157 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://stylebox/main.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/kapak 15.png" type="Texture" id=2]
+[ext_resource path="res://assets/kapak 14.png" type="Texture" id=3]
+[ext_resource path="res://stylebox/new_styleboxflat.tres" type="StyleBox" id=4]
+[ext_resource path="res://pps/pngwing.com (5).png" type="Texture" id=5]
+[ext_resource path="res://pps/kindpng_415494.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0705882, 0.105882, 0.133333, 1 )
+
+[node name="ui_aramalar" type="Control"]
+margin_right = 720.0
+margin_bottom = 1024.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="down" type="Panel" parent="."]
+margin_top = 240.0
+margin_right = 720.0
+margin_bottom = 1280.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="kisiler" type="Control" parent="down"]
+margin_top = -240.0
+margin_right = 40.0
+margin_bottom = -200.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="durumlist" type="Control" parent="down/kisiler"]
+margin_top = 240.0
+margin_right = 720.0
+margin_bottom = 1280.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="down/kisiler/durumlist"]
+margin_right = 720.0
+margin_bottom = 1040.0
+mouse_filter = 2
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="down/kisiler/durumlist/ScrollContainer"]
+margin_right = 720.0
+margin_bottom = 1040.0
+rect_min_size = Vector2( 0, 140 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="chatboton1" type="Button" parent="down/kisiler/durumlist/ScrollContainer/VBoxContainer"]
+margin_right = 720.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 708, 140 )
+mouse_filter = 2
+custom_styles/normal = ExtResource( 4 )
+
+[node name="username" type="Label" parent="down/kisiler/durumlist/ScrollContainer/VBoxContainer/chatboton1"]
+margin_left = 171.0
+margin_top = 29.0
+margin_right = 211.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Elizabeth Ualy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="date" type="Label" parent="down/kisiler/durumlist/ScrollContainer/VBoxContainer/chatboton1"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 171.0
+margin_top = 79.0
+margin_right = 680.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 1 )
+text = "5 saat önce"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="callico" type="TextureRect" parent="down/kisiler/durumlist/ScrollContainer/VBoxContainer/chatboton1"]
+margin_left = 550.0
+margin_top = 50.0
+margin_right = 590.0
+margin_bottom = 90.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="profile_photo" type="Sprite" parent="down/kisiler/durumlist/ScrollContainer/VBoxContainer/chatboton1"]
+position = Vector2( 75, 69 )
+scale = Vector2( 0.16, 0.16 )
+texture = ExtResource( 6 )
+
+[node name="chatboton2" type="Button" parent="down/kisiler/durumlist/ScrollContainer/VBoxContainer"]
+margin_top = 144.0
+margin_right = 720.0
+margin_bottom = 284.0
+rect_min_size = Vector2( 708, 140 )
+mouse_filter = 2
+custom_styles/normal = ExtResource( 4 )
+
+[node name="username" type="Label" parent="down/kisiler/durumlist/ScrollContainer/VBoxContainer/chatboton2"]
+margin_left = 171.0
+margin_top = 29.0
+margin_right = 211.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Myke Jack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="date" type="Label" parent="down/kisiler/durumlist/ScrollContainer/VBoxContainer/chatboton2"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 171.0
+margin_top = 79.0
+margin_right = 680.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 1 )
+text = "1 saat önce"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="callico" type="TextureRect" parent="down/kisiler/durumlist/ScrollContainer/VBoxContainer/chatboton2"]
+margin_left = 550.0
+margin_top = 50.0
+margin_right = 590.0
+margin_bottom = 90.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="profile_photo" type="Sprite" parent="down/kisiler/durumlist/ScrollContainer/VBoxContainer/chatboton2"]
+position = Vector2( 75, 69 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 5 )

@@ -1,0 +1,656 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://stylebox/main.tres" type="DynamicFont" id=1]
+[ext_resource path="res://stylebox/ui_sohbetler.tres" type="StyleBox" id=2]
+[ext_resource path="res://assets/kapak 12.png" type="Texture" id=3]
+[ext_resource path="res://script/ui_sohbetler.gd" type="Script" id=4]
+[ext_resource path="res://stylebox/new_styleboxflat.tres" type="StyleBox" id=5]
+[ext_resource path="res://pps/kindpng_415494.png" type="Texture" id=6]
+[ext_resource path="res://pps/kindpng_4042717 (1).png" type="Texture" id=7]
+[ext_resource path="res://pps/kindpng_4973038.png" type="Texture" id=8]
+[ext_resource path="res://pps/pngwing.com (5).png" type="Texture" id=9]
+[ext_resource path="res://pps/kindpng_1079992.png" type="Texture" id=10]
+
+[node name="ui_sohbetler" type="Control"]
+margin_right = 720.0
+margin_bottom = 240.0
+mouse_filter = 2
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="message\?create" type="CanvasLayer" parent="."]
+
+[node name="add_message" type="TextureRect" parent="message\?create"]
+margin_left = 547.0
+margin_top = 1078.0
+margin_right = 726.0
+margin_bottom = 1252.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="message_list" type="Control" parent="."]
+margin_top = 240.0
+margin_right = 720.0
+margin_bottom = 1280.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="message_list"]
+margin_right = 720.0
+margin_bottom = 1040.0
+mouse_filter = 1
+follow_focus = true
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="message_list/ScrollContainer"]
+margin_right = 708.0
+margin_bottom = 1580.0
+rect_min_size = Vector2( 0, 140 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="chatboton1" type="Button" parent="message_list/ScrollContainer/VBoxContainer"]
+margin_right = 708.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 708, 140 )
+mouse_filter = 1
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+
+[node name="profile_photo" type="Sprite" parent="message_list/ScrollContainer/VBoxContainer/chatboton1"]
+position = Vector2( 75, 69 )
+scale = Vector2( 0.16, 0.16 )
+texture = ExtResource( 6 )
+
+[node name="username" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton1"]
+margin_left = 171.0
+margin_top = 29.0
+margin_right = 211.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Elizabeth Ualy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="last_messag" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton1"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 171.0
+margin_top = 79.0
+margin_right = 680.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 1 )
+text = "Selamlar! bunu görünce lütfen..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="date" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton1"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 627.0
+margin_top = 34.0
+margin_right = 683.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 1 )
+text = "Dün"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="chatboton2" type="Button" parent="message_list/ScrollContainer/VBoxContainer"]
+margin_top = 144.0
+margin_right = 708.0
+margin_bottom = 284.0
+rect_min_size = Vector2( 708, 140 )
+mouse_filter = 1
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 5 )
+
+[node name="username" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton2"]
+margin_left = 171.0
+margin_top = 29.0
+margin_right = 211.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Johnson Daniel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="last_messag" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton2"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 171.0
+margin_top = 79.0
+margin_right = 680.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 1 )
+text = "Selamlar! bunu görünce lütfen..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="date" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton2"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 627.0
+margin_top = 34.0
+margin_right = 683.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 1 )
+text = "Dün"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="profile_photo" type="Sprite" parent="message_list/ScrollContainer/VBoxContainer/chatboton2"]
+position = Vector2( 75, 69 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 8 )
+
+[node name="chatboton3" type="Button" parent="message_list/ScrollContainer/VBoxContainer"]
+margin_top = 288.0
+margin_right = 708.0
+margin_bottom = 428.0
+rect_min_size = Vector2( 708, 140 )
+mouse_filter = 1
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 5 )
+
+[node name="username" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton3"]
+margin_left = 171.0
+margin_top = 29.0
+margin_right = 211.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Rose happy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="last_messag" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton3"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 171.0
+margin_top = 79.0
+margin_right = 680.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 1 )
+text = "Selamlar! bunu görünce lütfen..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="date" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton3"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 627.0
+margin_top = 34.0
+margin_right = 683.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 1 )
+text = "Dün"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="profile_photo" type="Sprite" parent="message_list/ScrollContainer/VBoxContainer/chatboton3"]
+position = Vector2( 75, 69 )
+scale = Vector2( 0.14, 0.14 )
+texture = ExtResource( 7 )
+
+[node name="chatboton4" type="Button" parent="message_list/ScrollContainer/VBoxContainer"]
+margin_top = 432.0
+margin_right = 708.0
+margin_bottom = 572.0
+rect_min_size = Vector2( 708, 140 )
+mouse_filter = 1
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 5 )
+
+[node name="username" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton4"]
+margin_left = 171.0
+margin_top = 29.0
+margin_right = 211.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Destroyer 1276"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="last_messag" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton4"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 171.0
+margin_top = 79.0
+margin_right = 680.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 1 )
+text = "Selamlar! bunu görünce lütfen..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="date" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton4"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 627.0
+margin_top = 34.0
+margin_right = 683.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 1 )
+text = "Dün"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="profile_photo" type="Sprite" parent="message_list/ScrollContainer/VBoxContainer/chatboton4"]
+position = Vector2( 75, 69 )
+scale = Vector2( 0.16, 0.16 )
+texture = ExtResource( 10 )
+
+[node name="chatboton5" type="Button" parent="message_list/ScrollContainer/VBoxContainer"]
+margin_top = 576.0
+margin_right = 708.0
+margin_bottom = 716.0
+rect_min_size = Vector2( 708, 140 )
+mouse_filter = 1
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 5 )
+
+[node name="username" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton5"]
+margin_left = 171.0
+margin_top = 29.0
+margin_right = 211.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Myke Jack.."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="last_messag" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton5"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 171.0
+margin_top = 79.0
+margin_right = 680.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 1 )
+text = "Selamlar! bunu görünce lütfen..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="date" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton5"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 627.0
+margin_top = 34.0
+margin_right = 683.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 1 )
+text = "Dün"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="profile_photo" type="Sprite" parent="message_list/ScrollContainer/VBoxContainer/chatboton5"]
+position = Vector2( 75, 69 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 9 )
+
+[node name="chatboton6" type="Button" parent="message_list/ScrollContainer/VBoxContainer"]
+margin_top = 720.0
+margin_right = 708.0
+margin_bottom = 860.0
+rect_min_size = Vector2( 708, 140 )
+mouse_filter = 1
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 5 )
+
+[node name="username" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton6"]
+margin_left = 171.0
+margin_top = 29.0
+margin_right = 211.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Elizabeth Ualy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="last_messag" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton6"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 171.0
+margin_top = 79.0
+margin_right = 680.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 1 )
+text = "Selamlar! bunu görünce lütfen..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="date" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton6"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 627.0
+margin_top = 34.0
+margin_right = 683.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 1 )
+text = "Dün"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="profile_photo" type="Sprite" parent="message_list/ScrollContainer/VBoxContainer/chatboton6"]
+position = Vector2( 75, 69 )
+scale = Vector2( 0.16, 0.16 )
+texture = ExtResource( 6 )
+
+[node name="chatboton7" type="Button" parent="message_list/ScrollContainer/VBoxContainer"]
+margin_top = 864.0
+margin_right = 708.0
+margin_bottom = 1004.0
+rect_min_size = Vector2( 708, 140 )
+mouse_filter = 1
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 5 )
+
+[node name="username" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton7"]
+margin_left = 171.0
+margin_top = 29.0
+margin_right = 211.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Johnson Daniel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="last_messag" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton7"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 171.0
+margin_top = 79.0
+margin_right = 680.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 1 )
+text = "Selamlar! bunu görünce lütfen..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="date" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton7"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 627.0
+margin_top = 34.0
+margin_right = 683.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 1 )
+text = "Dün"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="profile_photo" type="Sprite" parent="message_list/ScrollContainer/VBoxContainer/chatboton7"]
+position = Vector2( 75, 69 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 8 )
+
+[node name="chatboton8" type="Button" parent="message_list/ScrollContainer/VBoxContainer"]
+margin_top = 1008.0
+margin_right = 708.0
+margin_bottom = 1148.0
+rect_min_size = Vector2( 708, 140 )
+mouse_filter = 1
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 5 )
+
+[node name="username" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton8"]
+margin_left = 171.0
+margin_top = 29.0
+margin_right = 211.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Elizabeth Ualy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="last_messag" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton8"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 171.0
+margin_top = 79.0
+margin_right = 680.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 1 )
+text = "Selamlar! bunu görünce lütfen..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="date" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton8"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 627.0
+margin_top = 34.0
+margin_right = 683.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 1 )
+text = "Dün"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="profile_photo" type="Sprite" parent="message_list/ScrollContainer/VBoxContainer/chatboton8"]
+position = Vector2( 75, 69 )
+scale = Vector2( 0.16, 0.16 )
+texture = ExtResource( 6 )
+
+[node name="chatboton9" type="Button" parent="message_list/ScrollContainer/VBoxContainer"]
+margin_top = 1152.0
+margin_right = 708.0
+margin_bottom = 1292.0
+rect_min_size = Vector2( 708, 140 )
+mouse_filter = 1
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 5 )
+
+[node name="username" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton9"]
+margin_left = 171.0
+margin_top = 29.0
+margin_right = 211.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Destroyer 1267"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="last_messag" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton9"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 171.0
+margin_top = 79.0
+margin_right = 680.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 1 )
+text = "Selamlar! bunu görünce lütfen..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="date" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton9"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 627.0
+margin_top = 34.0
+margin_right = 683.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 1 )
+text = "Dün"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="profile_photo" type="Sprite" parent="message_list/ScrollContainer/VBoxContainer/chatboton9"]
+position = Vector2( 75, 69 )
+scale = Vector2( 0.16, 0.16 )
+texture = ExtResource( 10 )
+
+[node name="chatboton10" type="Button" parent="message_list/ScrollContainer/VBoxContainer"]
+margin_top = 1296.0
+margin_right = 708.0
+margin_bottom = 1436.0
+rect_min_size = Vector2( 708, 140 )
+mouse_filter = 1
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 5 )
+
+[node name="username" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton10"]
+margin_left = 171.0
+margin_top = 29.0
+margin_right = 211.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Elizabeth Ualy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="last_messag" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton10"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 171.0
+margin_top = 79.0
+margin_right = 680.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 1 )
+text = "Selamlar! bunu görünce lütfen..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="date" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton10"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 627.0
+margin_top = 34.0
+margin_right = 683.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 1 )
+text = "Dün"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="profile_photo" type="Sprite" parent="message_list/ScrollContainer/VBoxContainer/chatboton10"]
+position = Vector2( 75, 69 )
+scale = Vector2( 0.16, 0.16 )
+texture = ExtResource( 6 )
+
+[node name="chatboton11" type="Button" parent="message_list/ScrollContainer/VBoxContainer"]
+margin_top = 1440.0
+margin_right = 708.0
+margin_bottom = 1580.0
+rect_min_size = Vector2( 708, 140 )
+mouse_filter = 1
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 5 )
+
+[node name="username" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton11"]
+margin_left = 171.0
+margin_top = 29.0
+margin_right = 211.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Rose Happy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="last_messag" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton11"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 171.0
+margin_top = 79.0
+margin_right = 680.0
+margin_bottom = 154.0
+custom_fonts/font = ExtResource( 1 )
+text = "Selamlar! bunu görünce lütfen..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="date" type="Label" parent="message_list/ScrollContainer/VBoxContainer/chatboton11"]
+modulate = Color( 0.427451, 0.47451, 0.513726, 1 )
+margin_left = 627.0
+margin_top = 34.0
+margin_right = 683.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 1 )
+text = "Dün"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="profile_photo" type="Sprite" parent="message_list/ScrollContainer/VBoxContainer/chatboton11"]
+position = Vector2( 75, 69 )
+scale = Vector2( 0.14, 0.14 )
+texture = ExtResource( 7 )
+
+[connection signal="pressed" from="message_list/ScrollContainer/VBoxContainer/chatboton1" to="." method="_on_chatboton1_pressed"]
+[connection signal="pressed" from="message_list/ScrollContainer/VBoxContainer/chatboton2" to="." method="_on_chatboton2_pressed"]
+[connection signal="pressed" from="message_list/ScrollContainer/VBoxContainer/chatboton3" to="." method="_on_chatboton3_pressed"]
+[connection signal="pressed" from="message_list/ScrollContainer/VBoxContainer/chatboton4" to="." method="_on_chatboton4_pressed"]
+[connection signal="pressed" from="message_list/ScrollContainer/VBoxContainer/chatboton5" to="." method="_on_chatboton5_pressed"]
+[connection signal="pressed" from="message_list/ScrollContainer/VBoxContainer/chatboton6" to="." method="_on_chatboton6_pressed"]
+[connection signal="pressed" from="message_list/ScrollContainer/VBoxContainer/chatboton7" to="." method="_on_chatboton7_pressed"]
+[connection signal="pressed" from="message_list/ScrollContainer/VBoxContainer/chatboton8" to="." method="_on_chatboton8_pressed"]
+[connection signal="pressed" from="message_list/ScrollContainer/VBoxContainer/chatboton9" to="." method="_on_chatboton9_pressed"]
+[connection signal="pressed" from="message_list/ScrollContainer/VBoxContainer/chatboton10" to="." method="_on_chatboton10_pressed"]
+[connection signal="pressed" from="message_list/ScrollContainer/VBoxContainer/chatboton11" to="." method="_on_chatboton11_pressed"]
